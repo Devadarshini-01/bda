@@ -1,0 +1,191 @@
+ wget https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+--2023-11-09 15:11:15--  https://downloads.apache.org/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+Resolving downloads.apache.org (downloads.apache.org)... 88.99.95.219, 135.181.214.104, 2a01:4f9:3a:2c57::2, ...
+Connecting to downloads.apache.org (downloads.apache.org)|88.99.95.219|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 278813748 (266M) [application/x-gzip]
+Saving to: ‘apache-hive-3.1.2-bin.tar.gz’
+
+apache-hive-3.1.2-bin.tar.gz     100%[==========================================================>] 265.90M  2.32MB/s    in 87s     
+
+2023-11-09 15:12:43 (3.04 MB/s) - ‘apache-hive-3.1.2-bin.tar.gz’ saved [278813748/278813748]
+
+karthikeyan@karthikeyan-VirtualBox:~$ tar xzf apache-hive-3.1.2-bin.tar.gz
+karthikeyan@karthikeyan-VirtualBox:~$ nano .bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ source ~/.bashrc
+-bash: export: `home/karthikeyan/apache-hive-3.1.2-bin': not a valid identifier
+karthikeyan@karthikeyan-VirtualBox:~$ nano .bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ source ~/.bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ nano $HIVE_HOME/bin/hive-config.sh
+karthikeyan@karthikeyan-VirtualBox:~$ nano .bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ nano $HIVE_HOME/bin/hive-config.sh
+karthikeyan@karthikeyan-VirtualBox:~$ nano .bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ source ~/.bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ nano $HIVE_HOME/bin/hive-config.sh
+karthikeyan@karthikeyan-VirtualBox:~$ source ~/.bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ nano .bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ source ~/.bashrc
+karthikeyan@karthikeyan-VirtualBox:~$ nano $HIVE_HOME/bin/hive-config.sh
+karthikeyan@karthikeyan-VirtualBox:~$ nano $HIVE_HOME/bin/hive-config.sh
+karthikeyan@karthikeyan-VirtualBox:~$ nano $HIVE_HOME/bin/hive-config.sh^C
+karthikeyan@karthikeyan-VirtualBox:~$ cd $HIVE_HOME/bin
+karthikeyan@karthikeyan-VirtualBox:~/apache-hive-3.1.2-bin/bin$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/karthikeyan/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 2aaa193b-e480-4864-8ae5-6dce5ac83d91
+
+Logging initialized using configuration in jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true
+Exception in thread "main" java.lang.IllegalArgumentException: java.net.URISyntaxException: Relative path in absolute URI: ${system:java.io.tmpdir%7D/$%7Bsystem:user.name%7D
+	at org.apache.hadoop.fs.Path.initialize(Path.java:263)
+	at org.apache.hadoop.fs.Path.<init>(Path.java:221)
+	at org.apache.hadoop.hive.ql.session.SessionState.createSessionDirs(SessionState.java:710)
+	at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.java:627)
+	at org.apache.hadoop.hive.ql.session.SessionState.beginStart(SessionState.java:591)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:747)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:683)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:323)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+Caused by: java.net.URISyntaxException: Relative path in absolute URI: ${system:java.io.tmpdir%7D/$%7Bsystem:user.name%7D
+	at java.net.URI.checkPath(URI.java:1823)
+	at java.net.URI.<init>(URI.java:745)
+	at org.apache.hadoop.fs.Path.initialize(Path.java:260)
+	... 12 more
+karthikeyan@karthikeyan-VirtualBox:~/apache-hive-3.1.2-bin/bin$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/karthikeyan/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 5d3afbf7-dda2-4c55-bba5-598a5315a967
+
+Logging initialized using configuration in jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> show databases;
+FAILED: HiveException java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+hive> create database first;
+FAILED: HiveException java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+hive> exit
+    > ;
+karthikeyan@karthikeyan-VirtualBox:~/apache-hive-3.1.2-bin/bin$ cd $HIVE_HOME/bin
+karthikeyan@karthikeyan-VirtualBox:~/apache-hive-3.1.2-bin/bin$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/karthikeyan/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = b4306084-653a-4d62-bd3f-322ebe42e3ad
+
+Logging initialized using configuration in jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> create database first;
+FAILED: HiveException java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+hive> exit;
+karthikeyan@karthikeyan-VirtualBox:~/apache-hive-3.1.2-bin/bin$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/karthikeyan/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = 3ce91d7a-4517-4a8e-99af-47e691a0a816
+
+Logging initialized using configuration in jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> show databases;
+FAILED: HiveException java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+hive> exit;
+karthikeyan@karthikeyan-VirtualBox:~/apache-hive-3.1.2-bin/bin$ hive
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/karthikeyan/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Hive Session ID = ee5bf0b1-b961-45cb-ba40-ad0672d6ed80
+
+Logging initialized using configuration in jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/hive-common-3.1.2.jar!/hive-log4j2.properties Async: true
+Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
+hive> create database hivtest;
+FAILED: HiveException java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+hive> exit;
+karthikeyan@karthikeyan-VirtualBox:~/apache-hive-3.1.2-bin/bin$ hive --service metastore
+2023-11-09 16:18:26: Starting Hive Metastore Server
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/karthikeyan/apache-hive-3.1.2-bin/lib/log4j-slf4j-impl-2.10.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/karthikeyan/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+MetaException(message:Version information not found in metastore.)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:84)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:93)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:8661)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:8656)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.startMetaStore(HiveMetaStore.java:8926)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.main(HiveMetaStore.java:8843)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:323)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+Caused by: MetaException(message:Version information not found in metastore.)
+	at org.apache.hadoop.hive.metastore.ObjectStore.checkSchema(ObjectStore.java:9049)
+	at org.apache.hadoop.hive.metastore.ObjectStore.verifySchema(ObjectStore.java:9027)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.invoke(RawStoreProxy.java:97)
+	at com.sun.proxy.$Proxy25.verifySchema(Unknown Source)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:697)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:690)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:767)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:147)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:108)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:80)
+	... 11 more
+Exception in thread "main" MetaException(message:Version information not found in metastore.)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:84)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.getProxy(RetryingHMSHandler.java:93)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:8661)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.newRetryingHMSHandler(HiveMetaStore.java:8656)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.startMetaStore(HiveMetaStore.java:8926)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore.main(HiveMetaStore.java:8843)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:323)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:236)
+Caused by: MetaException(message:Version information not found in metastore.)
+	at org.apache.hadoop.hive.metastore.ObjectStore.checkSchema(ObjectStore.java:9049)
+	at org.apache.hadoop.hive.metastore.ObjectStore.verifySchema(ObjectStore.java:9027)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RawStoreProxy.invoke(RawStoreProxy.java:97)
+	at com.sun.proxy.$Proxy25.verifySchema(Unknown Source)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMSForConf(HiveMetaStore.java:697)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.getMS(HiveMetaStore.java:690)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.createDefaultDB(HiveMetaStore.java:767)
+	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.init(HiveMetaStore.java:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:147)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:108)
+	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.<init>(RetryingHMSHandler.java:80)
+	... 11 more
+
